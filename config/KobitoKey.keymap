@@ -1,5 +1,6 @@
 #include <input/processors.dtsi>
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
@@ -53,10 +54,10 @@
 
         default_layer {
             bindings = <
-&kp Q      &kp W     &kp E        &kp R        &kp T      &kp Y     &kp U        &kp I      &kp O      &kp P
-&kp A      &kp S     &kp D        &kp F        &kp G      &kp H     &kp J        &kp K      &kp L      &kp MINUS
-&kp Z      &kp X     &kp C        &kp V        &kp B      &kp B     &kp N        &kp M      &kp DOT    &kp SLASH
-&kp LCTRL  &kp LALT  &IME_TOGGLE  &lt 2 SPACE  &kp LCTRL  &kp BSPC  &lt 1 ENTER  &kp RSHFT  &kp RSHFT  &mt LALT SLASH
+&kp Q      &kp W     &kp E        &kp R        &kp T      &kp Y            &kp U        &kp I      &kp O      &kp P
+&kp A      &kp S     &kp D        &kp F        &kp G      &kp H            &kp J        &kp K      &kp L      &kp MINUS
+&kp Z      &kp X     &kp C        &kp V        &kp B      &kp B            &kp N        &kp M      &kp DOT    &kp SLASH
+&kp LCTRL  &kp LALT  &IME_TOGGLE  &lt 2 SPACE  &kp LCTRL  &lt 4 BACKSPACE  &lt 1 ENTER  &kp RSHFT  &kp RSHFT  &lt 4 ESCAPE
             >;
         };
 
@@ -96,6 +97,15 @@
 &kp AMPERSAND  &kp HASH  &kp SINGLE_QUOTE  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans         &trans    &kp COLON         &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans         &trans    &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        BLUE_TOOTH {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3    &bt BT_SEL 4
+&trans  &trans  &trans  &trans  &trans  &trans        &trans        &trans        &trans          &trans
+&trans  &trans  &trans  &trans  &trans  &trans        &trans        &trans        &bt BT_CLR_ALL  &bt BT_CLR
+&trans  &trans  &trans  &trans  &trans  &trans        &trans        &trans        &trans          &trans
             >;
         };
     };
