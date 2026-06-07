@@ -89,5 +89,14 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans  &trans
             >;
         };
+
+        SIMBOL {
+            bindings = <
+&trans         &trans    &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp AMPERSAND  &kp HASH  &kp SINGLE_QUOTE  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans         &trans    &kp COLON         &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans         &trans    &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
     };
 };
