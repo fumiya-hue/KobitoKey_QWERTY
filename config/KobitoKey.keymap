@@ -120,12 +120,3 @@
     };
 };
 
-/*
- * 6番目のレイヤー（SCROLL）が有効な間、トラックボールのXY移動をスクロールにマッピングします。
- */
-&trackball_listener {
-    scroller {
-        layers = <6>;
-        input-processors = <&zip_xy_to_scroll_mapper>;
-    };
-};
