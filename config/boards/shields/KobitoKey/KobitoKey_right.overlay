@@ -45,4 +45,10 @@
     device = <&tb_right>;
 
     input-processors = <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>;
+
+    scroller {
+        layers = <6>; // SCROLLレイヤー（6番）が有効なとき
+        /* Y軸反転を維持しつつ、移動量をスクロールに変換 */
+        input-processors = <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>, <&zip_xy_to_scroll_mapper>;
+    };
 };
