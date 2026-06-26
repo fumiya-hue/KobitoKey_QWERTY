@@ -108,5 +108,14 @@
 &trans  &trans  &trans  &trans  &trans  &trans        &trans        &trans        &trans          &trans
             >;
         };
+
+        L6_MOUSE_SCROLL {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
     };
 };
