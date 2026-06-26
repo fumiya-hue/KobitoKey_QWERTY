@@ -81,13 +81,13 @@
             >;
         };
 
-        layer3 {
+        K3_MOUSE {
             label = "MOUSE";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &mkp MB1  &mkp MB2  &msc MOVE_Y(5)  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &mkp MB5        &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans          &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans          &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &mkp MB1  &mkp MB2  &lt 6 F5  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &mkp MB5  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans
             >;
         };
 
