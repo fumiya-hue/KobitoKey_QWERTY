@@ -47,7 +47,7 @@
     input-processors = <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>;
 };
 
-&trackball_listener {
+&pointing_device_listener {
     scroller {
         layers = <6>;
         input-processors = <&zip_xy_to_scroll_mapper>;
