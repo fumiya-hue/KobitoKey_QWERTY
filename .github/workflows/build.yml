@@ -3,36 +3,4 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Install west and dependencies
-        run: |
-          pip install west
-          sudo apt-get update
-          sudo apt-get install -y ninja-build gperf
-
-      - name: Initialize west
-        run: |
-          west init -l zmk/app
-          west update
-
-      - name: List ZMK bindings
-        run: |
-          echo "=== ZMK bindings ==="
-          ls -R zmk/app/dts/bindings
-
-      - name: Build firmware (right)
-        run: |
-          west build -s zmk/app -d build/right \
-            -b seeeduino_xiao_ble \
-            -- -DZMK_CONFIG=config -DSHIELD="KobitoKey_right rgbled_adapter"
-
-      - name: Upload firmware
-        uses: actions/upload-artifact@v3
-        with:
-          name: firmware-right
-          path: build/right/zephyr/zmk.uf2
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.3
